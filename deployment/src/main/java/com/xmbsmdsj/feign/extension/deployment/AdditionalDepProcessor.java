@@ -17,7 +17,19 @@ import org.reflections.scanners.TypeAnnotationsScanner;
 
 import org.springframework.cloud.openfeign.FeignClient;
 
-public class FeignDepProcessor {
+/**
+ * This Processor processes indexed dependencies and emits indexed classes
+ * In Quarkus project, you can declare additional dependencies to index by
+ * adding
+ * quarkus.index-dependency.{name}.group-id=
+ * quarkus.index-dependency.{name}.artifact-id=
+ *
+ * There are also some known dependencies emitted by
+ * @see DepEmittingProcessor
+ *
+ * to application.properties file
+ */
+public class AdditionalDepProcessor {
 
 	public static final Class<FeignClient> FEIGN_ANNOTATION = FeignClient.class;
 	private final Logger logger = Logger.getLogger(FeignExtensionProcessor.class.getName());

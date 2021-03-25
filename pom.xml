@@ -56,6 +56,16 @@
         <artifactId>reflections</artifactId>
         <version>0.9.11</version>
       </dependency>
+      <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>1.1.1</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4.4</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <build>
@@ -120,6 +130,10 @@
     <dependency>
       <groupId>com.rometools</groupId>
       <artifactId>rome</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
     </dependency>
   </dependencies>
 </project>
