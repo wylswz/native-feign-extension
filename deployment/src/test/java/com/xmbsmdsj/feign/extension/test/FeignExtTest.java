@@ -12,34 +12,34 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
 public class FeignExtTest {
-    
-
-    public static interface FakeFeign{
-
-    }
-
-    public static class MyInvokationHandler implements InvocationHandler {
-
-        @Override
-        public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-            return null;
-        }
-    }
 
 
-    @RegisterExtension
-    static final QuarkusUnitTest config = new QuarkusUnitTest()
-    .setArchiveProducer( () ->
-        ShrinkWrap.create(JavaArchive.class)
-            .addClasses(MockAPI.class)
-    );
+	public static interface FakeFeign {
 
-    @Test
-    public void testNothing() {
-        Proxy.newProxyInstance(
-                FeignExtTest.class.getClassLoader(),
-                new Class[]{FakeFeign.class},
-                new MyInvokationHandler()
-        );
-    }
+	}
+
+	public static class MyInvokationHandler implements InvocationHandler {
+
+		@Override
+		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+			return null;
+		}
+	}
+
+
+	@RegisterExtension
+	static final QuarkusUnitTest config = new QuarkusUnitTest()
+			.setArchiveProducer(() ->
+					ShrinkWrap.create(JavaArchive.class)
+							.addClasses(MockAPI.class)
+			);
+
+	@Test
+	public void testNothing() {
+		Proxy.newProxyInstance(
+				FeignExtTest.class.getClassLoader(),
+				new Class[] {FakeFeign.class},
+				new MyInvokationHandler()
+		);
+	}
 }

@@ -10,12 +10,12 @@ import io.quarkus.test.junit.QuarkusTest;
 @QuarkusTest
 public class FeignExtensionResourceTest {
 
-    @Test
-    public void testHelloEndpoint() {
-        given()
-                .when().get("/feign-extension")
-                .then()
-                .statusCode(200)
-                .body(is("Hello feign-extension"));
-    }
+	@Test
+	public void testHelloEndpoint() {
+		given()
+				.when().get("/feign-extension")
+				.then()
+				.statusCode(200)
+				.body(is("Hello feign-extension"));
+	}
 }
