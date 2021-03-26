@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/runtime/feign-extension.iml" filepath="$PROJECT_DIR$/runtime/feign-extension.iml" />
       <module fileurl="file://$PROJECT_DIR$/deployment/feign-extension-deployment.iml" filepath="$PROJECT_DIR$/deployment/feign-extension-deployment.iml" />
       <module fileurl="file://$PROJECT_DIR$/feign-extension-parent.iml" filepath="$PROJECT_DIR$/feign-extension-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/tools.iml" filepath="$PROJECT_DIR$/tools/tools.iml" />
     </modules>
   </component>
 </project>

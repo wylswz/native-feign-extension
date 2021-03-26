@@ -50,11 +50,18 @@
         <module name="feign-extension-deployment" />
         <module name="feign-extension" />
       </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="tools" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="feign-extension" target="11" />
       <module name="feign-extension-deployment" target="11" />
       <module name="feign-extension-parent" target="11" />
+      <module name="tools" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
